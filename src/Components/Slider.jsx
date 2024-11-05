@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import GlobalApi from "../Services/GlobalApi";
 import axios from "axios";
 // const IMG_BASE_URL="https://api.themoviedb.org/3/movie"
 import { GoChevronRight } from "react-icons/go";
@@ -17,7 +16,7 @@ function Slider() {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/movie/now_playing?api_key=7f803f6abb22fd06057fed554c09cf75`
       );
-      console.log(data.results);
+     
       setmovielist(data.results);
     } catch (error) {
       console.log(error);
@@ -44,13 +43,13 @@ function Slider() {
       </div>
     <div className=" mt-[10px] flex overflow-x-auto px-16 py-4 rounded-lg scrollbar-hide scroll-smooth">
       {movielist.map((item, index) => {
-        const imageUrl = `https://image.tmdb.org/t/p/original/${item.backdrop_path}`;
-        console.log(imageUrl); // Check if the URL looks correct
+       
+        
 
         return (
           <img
             src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`}
-            className="min-w-full md:h-[450px] object-cover object-left-top  mr-5 scrollbar-hide rounded scrollable-container hover:border-[2px] border-gray-400 transition-all duration-100 ease-in" ref={elementRef}
+            className="min-w-full md:h-[450px] object-cover object-left-top  mr-5 scrollbar-hide rounded scrollable-container  border-[2px] border-transparent hover:border-gray-400 transition-all duration-200 ease-linear" ref={elementRef}
           />
         );
       })}

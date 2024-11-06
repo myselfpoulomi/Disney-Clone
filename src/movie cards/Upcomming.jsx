@@ -20,7 +20,7 @@ function Upcomming() {
       }
     }
     return (
-      <div className=" w-[100%] h-[350px] mt-[20px] mb-[6px]">
+      <div className=" w-[100%]  mt-[20px] mb-[6px]">
         <h1 className="text-[30px] font-bold text-white pl-[42px] pt-[10px] mb-[10px] mt-[120px]">
           Upcomming Movies
         </h1>

@@ -7,10 +7,11 @@ import './App.css'
 import NowPlaying from './movie cards/NowPlaying'
 import TopRated from './movie cards/TopRated'
 import Upcomming from './movie cards/Upcomming'
+import Footer from './Components/Footer'
 
 function App() {
   return (
-    <div className='bg-blue-9507 '>
+    <div className='bg-blue-9507  '>
       <Nav/>
       <Slider />
       <ProductionHouse/>
@@ -18,6 +19,7 @@ function App() {
       <NowPlaying />
       <TopRated />
       <Upcomming />
+      <Footer />
     </div>
   )
 }

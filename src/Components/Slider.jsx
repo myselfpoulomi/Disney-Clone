@@ -41,7 +41,7 @@ function Slider() {
       <GoChevronLeft  className=" hidden md:block text-white text-[30px] absolute mx-8 mt-[230px] bg-transparent cursor-pointer" onClick={sliderLeft}/>
       <GoChevronRight className=" hidden md:block text-white text-[30px] absolute mx-8 mt-[230px] right-0 bg-transparent cursor-pointer" onClick={sliderRight}/>
       </div>
-    <div className=" mt-[10px] flex overflow-x-auto px-16 py-4 rounded-lg scrollbar-hide scroll-smooth">
+    <div className=" mt-[10px] flex overflow-x-auto px-16 py-4 rounded-lg scrollbar-hide scroll-smooth " ref={elementRef}>
       {movielist.map((item, index) => {
        
         
@@ -49,7 +49,7 @@ function Slider() {
         return (
           <img
             src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`}
-            className="min-w-full md:h-[450px] object-cover object-left-top  mr-5 scrollbar-hide rounded scrollable-container  border-[2px] border-transparent hover:border-gray-400 transition-all duration-200 ease-linear" ref={elementRef}
+            className="min-w-full md:h-[450px] object-cover object-left-top  mr-5 scrollbar-hide rounded scrollable-container  border-[2px] border-transparent hover:border-gray-400 transition-all duration-200 ease-linear" 
           />
         );
       })}
